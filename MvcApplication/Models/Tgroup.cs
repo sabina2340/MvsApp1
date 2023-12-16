@@ -1,17 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MvcApplication.Models
 {
-    public class Tgroup
+    public class TGROUP
     {
-        [Key]
-        public int Id { get; set; }
-
-        [MaxLength(255)]
+        public long Id { get; set; }
         public string Name { get; set; }
-
-        // Навигационное свойство для связи многие ко многим
-        public ICollection<TgroupRelation> ParentRelations { get; set; }
-        public ICollection<TgroupRelation> ChildRelations { get; set; }
     }
 }
